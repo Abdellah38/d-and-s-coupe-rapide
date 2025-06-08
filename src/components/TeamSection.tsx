@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Users, Heart, Award } from 'lucide-react';
-
 const TeamSection = () => {
-  return (
-    <section id="equipe" className="py-20">
+  return <section id="equipe" className="py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -21,8 +18,8 @@ const TeamSection = () => {
               <div className="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit">
                 <Users className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Équipe Expérimentée</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-xl font-semibold mb-2 text-zinc-300">Équipe Expérimentée</h3>
+              <p className="text-zinc-200">
                 Deux coiffeurs passionnés avec une grande expertise
               </p>
             </div>
@@ -50,7 +47,7 @@ const TeamSection = () => {
 
           <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-lg p-8 text-center">
             <h3 className="text-2xl font-bold mb-4">Notre Philosophie</h3>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg leading-relaxed text-zinc-300">
               Chez D&S Barber, nous combinons les techniques traditionnelles du barbier avec les tendances modernes. 
               Notre ambiance conviviale et respectueuse garantit une expérience unique à chaque visite. 
               Nous nous engageons à vous offrir des résultats impeccables grâce à notre grande attention aux détails.
@@ -58,8 +55,6 @@ const TeamSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TeamSection;
