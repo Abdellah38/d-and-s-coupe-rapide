@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Scissors, MapPin, Phone, Instagram, Music } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-black border-t border-gray-700 py-12">
+  return <footer className="bg-black border-t border-gray-700 py-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo et description */}
@@ -20,7 +17,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center space-x-4">
               <Instagram className="w-6 h-6 hover:text-amber-400 cursor-pointer transition-colors text-gray-400" />
-              <Music className="w-6 h-6 hover:text-amber-400 cursor-pointer transition-colors text-gray-400" />
+              
             </div>
           </div>
 
@@ -53,13 +50,9 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
-            © 2024 D&S Barber. Tous droits réservés. • Salon de coiffure à La Hulpe
-          </p>
+          <p className="text-gray-400 text-sm">© 2025 D&amp;S Barber. Tous droits réservés. • Salon de coiffure à La Hulpe</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
