@@ -13,12 +13,14 @@ const BookingSection = () => {
     script.onload = () => {
       if (window.Cal) {
         window.Cal("init", "25min", {origin:"https://cal.com"});
-        window.Cal.ns["25min"]("inline", {
-          elementOrSelector:"#my-cal-inline",
-          config: {"layout":"month_view"},
-          calLink: "comptetest/25min",
-        });
-        window.Cal.ns["25min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        if (window.Cal.ns && window.Cal.ns["25min"]) {
+          window.Cal.ns["25min"]("inline", {
+            elementOrSelector:"#my-cal-inline",
+            config: {"layout":"month_view"},
+            calLink: "comptetest/25min",
+          });
+          window.Cal.ns["25min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        }
       }
     };
 
