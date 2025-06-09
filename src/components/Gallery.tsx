@@ -27,7 +27,7 @@ const Gallery = () => {
       description: "Sélection de produits haut de gamme"
     },
     {
-      url: "/lovable-uploads/e5c4e1f9-424c-487d-9151-c35d04b89a9d.png",
+      url: "https://images.unsplash.com/photo-1646825209987-6be8fe5f7403?q=80&w=2626&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "Salon de coiffure moderne",
       title: "Ambiance Chaleureuse",
       description: "Un espace pensé pour votre confort"
