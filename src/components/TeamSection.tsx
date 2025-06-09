@@ -18,7 +18,7 @@ const TeamSection = () => {
               <div className="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit">
                 <Users className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-zinc-300">Équipe Expérimentée</h3>
+              <h3 className="text-xl font-semibold mb-2 text-zinc-50">Équipe Expérimentée</h3>
               <p className="text-zinc-200">
                 Deux coiffeurs passionnés avec une grande expertise
               </p>
