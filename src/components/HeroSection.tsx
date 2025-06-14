@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Scissors, MapPin, Clock, Star } from 'lucide-react';
+import { Scissors, MapPin, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
@@ -22,28 +22,40 @@ const HeroSection = () => {
         <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-amber-500/30 rounded-full animate-bounce delay-500"></div>
       </div>
 
-      {/* Gravitating Stars around title */}
+      {/* Étoiles brillantes gravitant autour du titre */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="relative w-full h-full flex items-center justify-center">
-          {/* Star orbit container */}
-          <div className="absolute w-[800px] h-[400px] animate-spin-slow">
-            <Star className="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 text-amber-400 animate-pulse" />
-            <Star className="absolute top-1/4 right-0 w-3 h-3 text-amber-300/80 animate-ping delay-300" />
-            <Star className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-5 h-5 text-amber-500 animate-pulse delay-700" />
-            <Star className="absolute top-1/4 left-0 w-3 h-3 text-amber-400/70 animate-ping delay-1000" />
+          {/* Première orbite - grande */}
+          <div className="absolute w-[900px] h-[500px] animate-orbit-slow">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white rounded-full animate-twinkle shadow-glow"></div>
+            <div className="absolute top-1/4 right-0 w-2 h-2 bg-white/80 rounded-full animate-twinkle-delay-1 shadow-glow-sm"></div>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rounded-full animate-twinkle-delay-2 shadow-glow-lg"></div>
+            <div className="absolute top-1/4 left-0 w-2 h-2 bg-white/70 rounded-full animate-twinkle-delay-3 shadow-glow-sm"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-white/90 rounded-full animate-twinkle-delay-4 shadow-glow"></div>
           </div>
           
-          {/* Second orbit */}
-          <div className="absolute w-[600px] h-[300px] animate-spin-reverse">
-            <Star className="absolute top-1/3 right-1/4 w-4 h-4 text-amber-300 animate-pulse delay-500" />
-            <Star className="absolute bottom-1/3 left-1/4 w-3 h-3 text-amber-400/60 animate-ping delay-200" />
-            <Star className="absolute top-0 right-1/3 w-2 h-2 text-amber-500/80 animate-pulse delay-900" />
+          {/* Deuxième orbite - moyenne, rotation inverse */}
+          <div className="absolute w-[700px] h-[350px] animate-orbit-reverse">
+            <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-white rounded-full animate-twinkle-delay-2 shadow-glow"></div>
+            <div className="absolute bottom-1/3 left-1/4 w-2 h-2 bg-white/80 rounded-full animate-twinkle shadow-glow-sm"></div>
+            <div className="absolute top-0 right-1/3 w-1.5 h-1.5 bg-white/90 rounded-full animate-twinkle-delay-4 shadow-glow-xs"></div>
+            <div className="absolute bottom-1/4 left-1/3 w-2.5 h-2.5 bg-white/70 rounded-full animate-twinkle-delay-1 shadow-glow-sm"></div>
           </div>
 
-          {/* Third inner orbit */}
-          <div className="absolute w-[400px] h-[200px] animate-spin-slow delay-300">
-            <Star className="absolute top-0 left-1/3 w-3 h-3 text-amber-400 animate-ping delay-600" />
-            <Star className="absolute bottom-0 right-1/3 w-4 h-4 text-amber-300/70 animate-pulse delay-400" />
+          {/* Troisième orbite - petite, rapide */}
+          <div className="absolute w-[500px] h-[250px] animate-orbit-fast">
+            <div className="absolute top-0 left-1/3 w-2 h-2 bg-white rounded-full animate-twinkle-delay-3 shadow-glow-sm"></div>
+            <div className="absolute bottom-0 right-1/3 w-3 h-3 bg-white/80 rounded-full animate-twinkle-delay-1 shadow-glow"></div>
+            <div className="absolute top-1/2 left-0 w-1.5 h-1.5 bg-white/90 rounded-full animate-twinkle shadow-glow-xs"></div>
+            <div className="absolute top-1/2 right-0 w-2 h-2 bg-white/70 rounded-full animate-twinkle-delay-2 shadow-glow-sm"></div>
+          </div>
+
+          {/* Orbite interne - très proche du titre */}
+          <div className="absolute w-[300px] h-[150px] animate-orbit-inner">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-white rounded-full animate-twinkle-delay-4 shadow-glow-xs"></div>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-white/90 rounded-full animate-twinkle-delay-2 shadow-glow-sm"></div>
+            <div className="absolute top-1/2 left-0 w-1 h-1 bg-white/80 rounded-full animate-twinkle shadow-glow-xs"></div>
+            <div className="absolute top-1/2 right-0 w-1 h-1 bg-white/80 rounded-full animate-twinkle-delay-3 shadow-glow-xs"></div>
           </div>
         </div>
       </div>

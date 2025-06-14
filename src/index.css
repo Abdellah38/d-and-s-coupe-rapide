@@ -118,12 +118,63 @@
     animation: scaleIn 0.8s ease-out forwards;
   }
 
-  .animate-spin-slow {
-    animation: spin 20s linear infinite;
+  /* Animations d'orbites pour les étoiles */
+  .animate-orbit-slow {
+    animation: orbit 30s linear infinite;
   }
 
-  .animate-spin-reverse {
-    animation: spin-reverse 15s linear infinite;
+  .animate-orbit-reverse {
+    animation: orbit-reverse 25s linear infinite;
+  }
+
+  .animate-orbit-fast {
+    animation: orbit 20s linear infinite;
+  }
+
+  .animate-orbit-inner {
+    animation: orbit-reverse 15s linear infinite;
+  }
+
+  /* Animations de scintillement pour les étoiles */
+  .animate-twinkle {
+    animation: twinkle 2s ease-in-out infinite;
+  }
+
+  .animate-twinkle-delay-1 {
+    animation: twinkle 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+  }
+
+  .animate-twinkle-delay-2 {
+    animation: twinkle 2s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  .animate-twinkle-delay-3 {
+    animation: twinkle 2s ease-in-out infinite;
+    animation-delay: 1.5s;
+  }
+
+  .animate-twinkle-delay-4 {
+    animation: twinkle 2s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  /* Effets de lueur pour les étoiles */
+  .shadow-glow {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+
+  .shadow-glow-sm {
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.6), 0 0 12px rgba(255, 255, 255, 0.3);
+  }
+
+  .shadow-glow-lg {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+
+  .shadow-glow-xs {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5), 0 0 8px rgba(255, 255, 255, 0.2);
   }
 
   .hover-lift {
@@ -194,12 +245,34 @@
   }
 }
 
-@keyframes spin-reverse {
+/* Animations d'orbites */
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-reverse {
   from {
     transform: rotate(360deg);
   }
   to {
     transform: rotate(0deg);
+  }
+}
+
+/* Animation de scintillement des étoiles */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
   }
 }
 
