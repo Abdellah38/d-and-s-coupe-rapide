@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Scissors, MapPin, Clock } from 'lucide-react';
+import { Scissors, MapPin, Clock, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
@@ -22,6 +22,32 @@ const HeroSection = () => {
         <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-amber-500/30 rounded-full animate-bounce delay-500"></div>
       </div>
 
+      {/* Gravitating Stars around title */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="relative w-full h-full flex items-center justify-center">
+          {/* Star orbit container */}
+          <div className="absolute w-[800px] h-[400px] animate-spin-slow">
+            <Star className="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 text-amber-400 animate-pulse" />
+            <Star className="absolute top-1/4 right-0 w-3 h-3 text-amber-300/80 animate-ping delay-300" />
+            <Star className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-5 h-5 text-amber-500 animate-pulse delay-700" />
+            <Star className="absolute top-1/4 left-0 w-3 h-3 text-amber-400/70 animate-ping delay-1000" />
+          </div>
+          
+          {/* Second orbit */}
+          <div className="absolute w-[600px] h-[300px] animate-spin-reverse">
+            <Star className="absolute top-1/3 right-1/4 w-4 h-4 text-amber-300 animate-pulse delay-500" />
+            <Star className="absolute bottom-1/3 left-1/4 w-3 h-3 text-amber-400/60 animate-ping delay-200" />
+            <Star className="absolute top-0 right-1/3 w-2 h-2 text-amber-500/80 animate-pulse delay-900" />
+          </div>
+
+          {/* Third inner orbit */}
+          <div className="absolute w-[400px] h-[200px] animate-spin-slow delay-300">
+            <Star className="absolute top-0 left-1/3 w-3 h-3 text-amber-400 animate-ping delay-600" />
+            <Star className="absolute bottom-0 right-1/3 w-4 h-4 text-amber-300/70 animate-pulse delay-400" />
+          </div>
+        </div>
+      </div>
+
       <div className="relative z-20 container mx-auto px-6 text-center">
         <div className="animate-fade-in">
           <div className="flex justify-center mb-8">
@@ -30,7 +56,7 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight text-white">
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight text-white relative">
             The Gentleman's
             <br />
             <span className="text-amber-400">Barber</span>
